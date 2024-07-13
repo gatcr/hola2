@@ -1,20 +1,64 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    background-color: #87CEEB;
+}
+
+#sky {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    background-color: #87CEEB;
+    overflow: hidden;
+}
+
+#clouds {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: url('https://i.imgur.com/B6gRw9e.png') repeat-x;
+    animation: moveClouds 30s linear infinite;
+}
+
+@keyframes moveClouds {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#ground {
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background-color: #228B22;
+}
+
+#trees {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/3BphJmG.png') repeat-x;
 }
 
 #game-container {
+    position: relative;
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 80%;
     max-width: 600px;
+    margin: auto;
+    z-index: 10;
 }
 
 #story {
@@ -53,4 +97,16 @@ body {
     align-items: center;
     font-size: 18px;
     color: white;
+}
+
+#hero {
+    background-image: url('https://i.imgur.com/pYamzx5.png');
+}
+
+#villain {
+    background-image: url('https://i.imgur.com/IClGsh9.png');
+}
+
+#treasure {
+    background-image: url('https://i.imgur.com/2nwbUdZ.png');
 }
